@@ -1,5 +1,7 @@
-﻿using MailKit.Net.Smtp;
+﻿using System;
+using MailKit.Net.Smtp;
 using MimeKit;
+using NLog;
 using RSB.Diagnostics;
 using RSB.Modules.MailSender.Contracts;
 using RSB.Transports.RabbitMQ;
@@ -13,6 +15,7 @@ namespace RSB.Modules.MailSender
         private readonly RabbitMqTransportSettings _rabbitMqSettings;
         private readonly string _instanceName;
         private Bus _bus;
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         public MailSenderService(SmtpSettings smtpSettings, RabbitMqTransportSettings rabbitMqSettings, string instanceName)
         {
@@ -37,6 +40,8 @@ namespace RSB.Modules.MailSender
 
         public void HandleMailMessage(MailMessage msg)
         {
+            Logger.Info("Handling new mail message to {0}.", msg.ToMail);
+
             var message = new MimeMessage();
 
             message.From.Add(new MailboxAddress(msg.FromName, msg.FromMail));
@@ -48,19 +53,28 @@ namespace RSB.Modules.MailSender
                 Text = msg.Body
             };
 
-            using (var client = new SmtpClient())
+            try
             {
-                client.Connect(_smtpSettings.Hostname, _smtpSettings.Port, _smtpSettings.UseSsl);
-
-                if (string.IsNullOrWhiteSpace(_smtpSettings.Username))
+                using (var client = new SmtpClient())
                 {
-                    client.AuthenticationMechanisms.Remove("XOAUTH2");
-                    client.Authenticate(_smtpSettings.Username, _smtpSettings.Password);
+                    client.Connect(_smtpSettings.Hostname, _smtpSettings.Port, _smtpSettings.UseSsl);
+
+                    if (!string.IsNullOrWhiteSpace(_smtpSettings.Username))
+                    {
+                        client.AuthenticationMechanisms.Remove("XOAUTH2");
+                        client.Authenticate(_smtpSettings.Username, _smtpSettings.Password);
+                    }
+
+                    client.Send(message);
+
+                    client.Disconnect(true);
+
+                    Logger.Info("Message to {0} has been sent.", msg.ToMail);
                 }
-
-                client.Send(message);
-
-                client.Disconnect(true);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex, "Error while sending mail to {0}", msg.ToMail);
             }
         }
     }

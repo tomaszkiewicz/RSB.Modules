@@ -51,6 +51,5 @@ namespace RSB.Modules.MailSender
 
             return new MailSenderService(smtpSettings, rabbitMqTransportSettings, Properties.Settings.Default.InstanceName);
         }
-
     }
 }
