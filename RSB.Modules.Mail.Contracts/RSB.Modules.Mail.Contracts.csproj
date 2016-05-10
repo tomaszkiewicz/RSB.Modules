@@ -7,8 +7,8 @@
     <ProjectGuid>{E311871E-8E84-4755-82BC-CE739D8AB49D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RSB.Modules.MailSender.Contracts</RootNamespace>
-    <AssemblyName>RSB.Modules.MailSender.Contracts</AssemblyName>
+    <RootNamespace>RSB.Modules.Mail.Contracts</RootNamespace>
+    <AssemblyName>RSB.Modules.Mail.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

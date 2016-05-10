@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSB.Modules.MailSender", "RSB.Modules.MailSender\RSB.Modules.MailSender.csproj", "{D81E14DF-261B-4107-94DC-D202ECA7FF7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSB.Modules.Mail.Contracts", "RSB.Modules.Mail.Contracts\RSB.Modules.Mail.Contracts.csproj", "{E311871E-8E84-4755-82BC-CE739D8AB49D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSB.Modules.MailSender.Contracts", "RSB.Modules.MailSender.Contracts\RSB.Modules.MailSender.Contracts.csproj", "{E311871E-8E84-4755-82BC-CE739D8AB49D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSB.Modules.Mail.SmtpSender", "RSB.Modules.Mail.SmtpSender\RSB.Modules.Mail.SmtpSender.csproj", "{D81E14DF-261B-4107-94DC-D202ECA7FF7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D81E14DF-261B-4107-94DC-D202ECA7FF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D81E14DF-261B-4107-94DC-D202ECA7FF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D81E14DF-261B-4107-94DC-D202ECA7FF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D81E14DF-261B-4107-94DC-D202ECA7FF7F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E311871E-8E84-4755-82BC-CE739D8AB49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E311871E-8E84-4755-82BC-CE739D8AB49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E311871E-8E84-4755-82BC-CE739D8AB49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E311871E-8E84-4755-82BC-CE739D8AB49D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D81E14DF-261B-4107-94DC-D202ECA7FF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81E14DF-261B-4107-94DC-D202ECA7FF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81E14DF-261B-4107-94DC-D202ECA7FF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81E14DF-261B-4107-94DC-D202ECA7FF7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

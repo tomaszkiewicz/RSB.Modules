@@ -1,4 +1,4 @@
-﻿namespace RSB.Modules.MailSender.Contracts
+﻿namespace RSB.Modules.Mail.Contracts
 {
     public class MailMessage
     {

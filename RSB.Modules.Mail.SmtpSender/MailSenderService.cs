@@ -3,11 +3,11 @@ using MailKit.Net.Smtp;
 using MimeKit;
 using NLog;
 using RSB.Diagnostics;
-using RSB.Modules.MailSender.Contracts;
+using RSB.Modules.Mail.Contracts;
 using RSB.Transports.RabbitMQ;
 using RSB.Transports.RabbitMQ.Settings;
 
-namespace RSB.Modules.MailSender
+namespace RSB.Modules.Mail.SmtpSender
 {
     internal class MailSenderService
     {
