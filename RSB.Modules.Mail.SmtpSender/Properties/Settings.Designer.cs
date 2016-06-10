@@ -34,7 +34,7 @@ namespace RSB.Modules.Mail.SmtpSender.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("smtp-relay.gmail.com")]
         public string Hostname {
             get {
                 return ((string)(this["Hostname"]));

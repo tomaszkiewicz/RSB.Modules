@@ -7,15 +7,14 @@ namespace RSB.Modules.Mail.SmtpSender
 {
     class Program
     {
-
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         private static void Main(string[] args)
         {
             HostFactory.Run(x =>
             {
-                x.SetServiceName("RSB.Modules.MailSender");
-                x.SetDisplayName("RSB.Modules.MailSender");
+                x.SetServiceName("RSB.Modules.Mail.SmtpSender");
+                x.SetDisplayName("RSB.Modules.Mail.SmtpSender");
                 x.SetDescription("This service mail sending features for RSB.");
 
                 x.StartAutomatically();
@@ -34,7 +33,7 @@ namespace RSB.Modules.Mail.SmtpSender
 
         private static MailSenderService InitializeApiService()
         {
-            Logger.Info("Starting RSB.Modules.MailSender service...");
+            Logger.Info("Starting RSB.Modules.Mail.SmtpSender service...");
 
             System.IO.Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
 
