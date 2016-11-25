@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RSB.Modules.Mail.SmtpSender.Properties {
+namespace RSB.Modules.Templater.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -52,46 +52,19 @@ namespace RSB.Modules.Mail.SmtpSender.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("smtp.gmail.com")]
-        public string MailHostname {
+        [global::System.Configuration.DefaultSettingValueAttribute("Templates")]
+        public string TemplatesDirPath {
             get {
-                return ((string)(this["MailHostname"]));
+                return ((string)(this["TemplatesDirPath"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("example@mail.com")]
-        public string MailAddress {
+        [global::System.Configuration.DefaultSettingValueAttribute("Templates.dll")]
+        public string TemplatesDllPath {
             get {
-                return ((string)(this["MailAddress"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("example@mail.com")]
-        public string MailUsername {
-            get {
-                return ((string)(this["MailUsername"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Demo")]
-        public string MailPassword {
-            get {
-                return ((string)(this["MailPassword"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("587")]
-        public int MailPort {
-            get {
-                return ((int)(this["MailPort"]));
+                return ((string)(this["TemplatesDllPath"]));
             }
         }
         
@@ -104,18 +77,6 @@ namespace RSB.Modules.Mail.SmtpSender.Properties {
             }
             set {
                 this["RoutingKey"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool UseSsl {
-            get {
-                return ((bool)(this["UseSsl"]));
-            }
-            set {
-                this["UseSsl"] = value;
             }
         }
     }

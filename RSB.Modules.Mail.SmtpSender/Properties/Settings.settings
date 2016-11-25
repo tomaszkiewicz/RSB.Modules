@@ -2,23 +2,35 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RSB.Modules.Mail.SmtpSender.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="InstanceName" Type="System.String" Scope="Application">
+    <Setting Name="RabbitHostname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="RabbitUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">guest</Value>
+    </Setting>
+    <Setting Name="RabbitPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">guest</Value>
+    </Setting>
+    <Setting Name="MailHostname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="MailAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">example@mail.com</Value>
+    </Setting>
+    <Setting Name="MailUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">example@mail.com</Value>
+    </Setting>
+    <Setting Name="MailPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Demo</Value>
+    </Setting>
+    <Setting Name="MailPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="RoutingKey" Type="System.String" Scope="User">
       <Value Profile="(Default)">Default</Value>
     </Setting>
-    <Setting Name="Hostname" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">smtp-relay.gmail.com</Value>
-    </Setting>
-    <Setting Name="Password" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Port" Type="System.Int32" Scope="Application">
-      <Value Profile="(Default)">25</Value>
-    </Setting>
-    <Setting Name="UseSsl" Type="System.Boolean" Scope="Application">
+    <Setting Name="UseSsl" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="Username" Type="System.String" Scope="Application">
-      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>

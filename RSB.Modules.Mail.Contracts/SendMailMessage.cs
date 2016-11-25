@@ -1,11 +1,12 @@
-﻿namespace RSB.Modules.Mail.Contracts
+﻿using System.Collections.Generic;
+
+namespace RSB.Modules.Mail.Contracts
 {
-    public class MailMessage
+    public class SendMailMessage
     {
         public string FromMail { get; set; }
         public string FromName { get; set; }
-        public string ToMail { get; set; }
-        public string ToName { get; set; }
+        public List<Recipient> Recipients { get; set; }
         public string Subject { get; set; }
         public string Body { get; set; }
     }
